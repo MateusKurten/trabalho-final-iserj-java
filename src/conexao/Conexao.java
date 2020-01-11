@@ -17,8 +17,8 @@ public class Conexao{
     public static void Conectar() {
         System.out.println("Conectando ao banco...");
         try{
-            Class.forName("com.mysql.jdbc.Driver");
-            con = DriverManager.getConnection("jdbc:mysql://localhost/TabletRestaurante","root","root");
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            con = DriverManager.getConnection("jdbc:mysql://localhost/TabletRestaurante?useTimezone=true&serverTimezone=UTC","root","root");
             System.out.println("Conectado.");
         } catch (ClassNotFoundException ex){
             System.out.println("Classe não encontrada, adicione o driver nas bibliotecas.");

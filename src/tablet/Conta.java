@@ -18,9 +18,9 @@ public class Conta {
         String nome;
         int qtd;
         BancoDeDados.inserirQuery("CREATE TABLE integrantes(idIntegrante int primary key not null auto_increment, nome varchar(255))");
-        BancoDeDados.inserirQuery("CREATE TABLE conta(idIntegrante INT, pedido VARCHAR(255), qtd INT, preco FLOAT)");
+        BancoDeDados.inserirQuery("CREATE TABLE pedidos(idIntegrante INT, idItem INT, qtd INT)");
         //Adicionando relacionamento
-        BancoDeDados.inserirQuery("ALTER TABLE conta ADD CONSTRAINT idIntegrante FOREIGN KEY (idIntegrante) REFERENCES integrantes(idIntegrante);");
+        BancoDeDados.inserirQuery("ALTER TABLE pedidos ADD CONSTRAINT idIntegrante FOREIGN KEY (idIntegrante) REFERENCES integrantes(idIntegrante);");
         //Definindo e processando a quantidade de pessoas na mesa
         do{
             qtd = Integer.parseInt(JOptionPane.showInputDialog("Informe a quantidade de integrantes da mesa"));
@@ -39,8 +39,8 @@ public class Conta {
         }
     }
     
-    protected void incluirPedido(String nome, String pedido, int qtd, double preco){
-        BancoDeDados.inserirQuery("INSERT INTO conta(idIntegrante, pedido, qtd, preco) VALUES (\'" + nome +
-                "\', \'" + pedido + "\', " + qtd + ", " + preco + ")");
+    protected static void incluirPedido(int idIntegrante, int idItem, int qtd){
+        BancoDeDados.inserirQuery("INSERT INTO pedidos(idIntegrante, idItem, qtd) VALUES (\'" + idIntegrante +
+                "\', \'" + idItem + "\', " + qtd + ")");
     }
 }
