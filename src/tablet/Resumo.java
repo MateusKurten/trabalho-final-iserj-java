@@ -10,6 +10,8 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import javax.swing.JOptionPane;
 import conexao.*;
+import java.util.ArrayList;
+import javax.swing.JLabel;
 
 /**
  *
@@ -23,7 +25,8 @@ public class Resumo extends javax.swing.JFrame {
     public Resumo() {
         initComponents();
     }
-
+    
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -272,6 +275,9 @@ public class Resumo extends javax.swing.JFrame {
     /**
      * @param args the command line arguments
      */
+    
+  
+    
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
@@ -302,6 +308,20 @@ public class Resumo extends javax.swing.JFrame {
                 new Resumo().setVisible(true);
                 Conexao CON = new Conexao();
                 CON.Conectar();
+                try{
+                    ArrayList<String> vetorIntegrantes = new ArrayList<String>();
+                    PreparedStatement stmt = CON.con.prepareStatement("Select nome from integrantes");
+                    ResultSet rs = stmt.executeQuery();
+                    while (rs.next()){
+                        vetorIntegrantes.add(rs.getString("nome"));
+                    }
+                    //PROBLEMA AQUI: nomeIntegrante1.setText(vetorIntegrantes.get(0));
+                    CON.con.close();
+                } catch (SQLException e) {
+                    System.out.println(e);
+                    System.out.println("Deu erro!");
+                    throw new RuntimeException(e);
+                } 
             }
         });
     }
