@@ -12,6 +12,7 @@ import javax.swing.JOptionPane;
 import conexao.*;
 import java.util.ArrayList;
 import javax.swing.JLabel;
+import javax.swing.SwingUtilities;
 
 /**
  *
@@ -267,6 +268,104 @@ public class Resumo extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
+    //SETTERS E GETTERS
+    
+    public JLabel getNomeIntegrante1() {
+        return nomeIntegrante1;
+    }
+
+    public void setNomeIntegrante1(String str) {
+        this.nomeIntegrante1.setText(str);
+    }
+
+    public JLabel getNomeIntegrante2() {
+        return nomeIntegrante2;
+    }
+
+    public void setNomeIntegrante2(String str) {
+        this.nomeIntegrante2.setText(str);
+    }
+
+    public JLabel getNomeIntegrante3() {
+        return nomeIntegrante3;
+    }
+
+    public void setNomeIntegrante3(String str) {
+        this.nomeIntegrante3.setText(str);
+    }
+
+    public JLabel getNomeIntegrante4() {
+        return nomeIntegrante4;
+    }
+
+    public void setNomeIntegrante4(String str) {
+        this.nomeIntegrante4.setText(str);
+    }
+
+    public JLabel getNomeIntegrante5() {
+        return nomeIntegrante5;
+    }
+
+    public void setNomeIntegrante5(String str) {
+        this.nomeIntegrante5.setText(str);
+    }
+
+    public JLabel getNomeIntegrante6() {
+        return nomeIntegrante6;
+    }
+
+    public void setNomeIntegrante6(String str) {
+        this.nomeIntegrante6.setText(str);
+    }
+
+    public JLabel getValorIntegrante1() {
+        return valorIntegrante1;
+    }
+
+    public void setValorIntegrante1(JLabel valorIntegrante1) {
+        this.valorIntegrante1 = valorIntegrante1;
+    }
+
+    public JLabel getValorIntegrante2() {
+        return valorIntegrante2;
+    }
+
+    public void setValorIntegrante2(JLabel valorIntegrante2) {
+        this.valorIntegrante2 = valorIntegrante2;
+    }
+
+    public JLabel getValorIntegrante3() {
+        return valorIntegrante3;
+    }
+
+    public void setValorIntegrante3(JLabel valorIntegrante3) {
+        this.valorIntegrante3 = valorIntegrante3;
+    }
+
+    public JLabel getValorIntegrante4() {
+        return valorIntegrante4;
+    }
+
+    public void setValorIntegrante4(JLabel valorIntegrante4) {
+        this.valorIntegrante4 = valorIntegrante4;
+    }
+
+    public JLabel getValorIntegrante5() {
+        return valorIntegrante5;
+    }
+
+    public void setValorIntegrante5(JLabel valorIntegrante5) {
+        this.valorIntegrante5 = valorIntegrante5;
+    }
+
+    public JLabel getValorIntegrante6() {
+        return valorIntegrante6;
+    }
+
+    public void setValorIntegrante6(JLabel valorIntegrante6) {
+        this.valorIntegrante6 = valorIntegrante6;
+    }
+
     private void botaoVoltarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoVoltarActionPerformed
         // TODO add your handling code here:
         this.dispose();
@@ -305,23 +404,53 @@ public class Resumo extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Resumo().setVisible(true);
+                System.out.println("O run rodou");
                 Conexao CON = new Conexao();
                 CON.Conectar();
                 try{
+                    //Buscando nome dos integrantes
                     ArrayList<String> vetorIntegrantes = new ArrayList<String>();
                     PreparedStatement stmt = CON.con.prepareStatement("Select nome from integrantes");
                     ResultSet rs = stmt.executeQuery();
                     while (rs.next()){
                         vetorIntegrantes.add(rs.getString("nome"));
                     }
-                    //PROBLEMA AQUI: nomeIntegrante1.setText(vetorIntegrantes.get(0));
+                    while (vetorIntegrantes.size() < 6){
+                        vetorIntegrantes.add("Vazio");
+                    }
+                    //Mostrando o nome dos integrantes nos Labels
+                    Resumo telaResumo = new Resumo();
+                    System.out.println("Chegou nos ifs");
+                    if (!vetorIntegrantes.get(0).equals("Vazio")){
+                        telaResumo.nomeIntegrante1.setText(vetorIntegrantes.get(0));
+                    }
+                    if (!vetorIntegrantes.get(1).equals("Vazio")){
+                        telaResumo.nomeIntegrante2.setText(vetorIntegrantes.get(1));
+                    }
+                    if (!vetorIntegrantes.get(2).equals("Vazio")){
+                        telaResumo.nomeIntegrante3.setText(vetorIntegrantes.get(2));
+                    }
+                    if (!vetorIntegrantes.get(3).equals("Vazio")){
+                        telaResumo.nomeIntegrante4.setText(vetorIntegrantes.get(3));
+                    }
+                    if (!vetorIntegrantes.get(4).equals("Vazio")){
+                        telaResumo.nomeIntegrante5.setText(vetorIntegrantes.get(4));
+                    }
+                    if (!vetorIntegrantes.get(5).equals("Vazio")){
+                        telaResumo.nomeIntegrante6.setText(vetorIntegrantes.get(5));
+                    }
+                    telaResumo.setVisible(true);
+                    System.out.println("Pós setvisible");
+                    SwingUtilities.updateComponentTreeUI(telaResumo);
+                    telaResumo.invalidate();
+                    telaResumo.validate();
+                    telaResumo.repaint();
                     CON.con.close();
                 } catch (SQLException e) {
                     System.out.println(e);
                     System.out.println("Deu erro!");
                     throw new RuntimeException(e);
-                } 
+                }
             }
         });
     }

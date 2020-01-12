@@ -11,6 +11,7 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import javax.swing.JOptionPane;
 import conexao.*;
+import javax.swing.SwingUtilities;
 
 /**
  *
@@ -148,7 +149,52 @@ public class Cardapio extends javax.swing.JFrame {
 
     private void jLabel4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel4MouseClicked
         // TODO add your handling code here:
-       
+        Conexao CON = new Conexao();
+        CON.Conectar();
+        try{
+            //Buscando nome dos integrantes
+            ArrayList<String> vetorIntegrantes = new ArrayList<String>();
+            PreparedStatement stmt = CON.con.prepareStatement("Select nome from integrantes");
+            ResultSet rs = stmt.executeQuery();
+            while (rs.next()){
+                vetorIntegrantes.add(rs.getString("nome"));
+            }
+            while (vetorIntegrantes.size() < 6){
+                vetorIntegrantes.add("Vazio");
+            }
+            //Mostrando o nome dos integrantes nos Labels
+            Resumo telaResumo = new Resumo();
+            System.out.println("Chegou nos ifs");
+            if (!vetorIntegrantes.get(0).equals("Vazio")){
+                telaResumo.setNomeIntegrante1(vetorIntegrantes.get(0));
+            }
+            if (!vetorIntegrantes.get(1).equals("Vazio")){
+                telaResumo.setNomeIntegrante2(vetorIntegrantes.get(1));
+            }
+            if (!vetorIntegrantes.get(2).equals("Vazio")){
+                telaResumo.setNomeIntegrante3(vetorIntegrantes.get(2));
+            }
+            if (!vetorIntegrantes.get(3).equals("Vazio")){
+                telaResumo.setNomeIntegrante4(vetorIntegrantes.get(3));
+            }
+            if (!vetorIntegrantes.get(4).equals("Vazio")){
+                telaResumo.setNomeIntegrante5(vetorIntegrantes.get(4));
+            }
+            if (!vetorIntegrantes.get(5).equals("Vazio")){
+                telaResumo.setNomeIntegrante6(vetorIntegrantes.get(5));
+            }
+            telaResumo.setVisible(true);
+            System.out.println("Pós setvisible");
+            /*SwingUtilities.updateComponentTreeUI(telaResumo);
+            telaResumo.invalidate();
+            telaResumo.validate();
+            telaResumo.repaint();
+            CON.con.close();*/
+        } catch (SQLException e) {
+            System.out.println(e);
+            System.out.println("Deu erro!");
+            throw new RuntimeException(e);
+        }
     }//GEN-LAST:event_jLabel4MouseClicked
 
     /**
