@@ -35,7 +35,7 @@ public class Cardapio extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel4 = new javax.swing.JLabel();
+        Resumo = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
@@ -50,16 +50,16 @@ public class Cardapio extends javax.swing.JFrame {
         setSize(new java.awt.Dimension(1024, 720));
         getContentPane().setLayout(null);
 
-        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagem/acompanhar.jpg"))); // NOI18N
-        jLabel4.setText("jLabel4");
-        jLabel4.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 3, true));
-        jLabel4.addMouseListener(new java.awt.event.MouseAdapter() {
+        Resumo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagem/acompanhar.jpg"))); // NOI18N
+        Resumo.setText("jLabel4");
+        Resumo.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 3, true));
+        Resumo.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabel4MouseClicked(evt);
+                ResumoMouseClicked(evt);
             }
         });
-        getContentPane().add(jLabel4);
-        jLabel4.setBounds(670, 460, 210, 144);
+        getContentPane().add(Resumo);
+        Resumo.setBounds(670, 460, 210, 144);
 
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagem/tabulerio.jpg"))); // NOI18N
         jLabel3.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 3, true));
@@ -146,13 +146,16 @@ public class Cardapio extends javax.swing.JFrame {
         // TODO add your handling code here:
         new Jogos().setVisible(true);
     }//GEN-LAST:event_jLabel3MouseClicked
-
-    private void jLabel4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel4MouseClicked
+    
+    //BOTAO RESUMO
+    private void ResumoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ResumoMouseClicked
         // TODO add your handling code here:
         Conexao CON = new Conexao();
         CON.Conectar();
         try{
-            //Buscando nome dos integrantes
+            //Buscando nome dos integrantes e valores
+            double valorIndividual;
+            ArrayList<Double> valoresIndividuais = new ArrayList<Double>();
             ArrayList<String> vetorIntegrantes = new ArrayList<String>();
             PreparedStatement stmt = CON.con.prepareStatement("Select nome from integrantes");
             ResultSet rs = stmt.executeQuery();
@@ -162,40 +165,56 @@ public class Cardapio extends javax.swing.JFrame {
             while (vetorIntegrantes.size() < 6){
                 vetorIntegrantes.add("Vazio");
             }
-            //Mostrando o nome dos integrantes nos Labels
+            //Mostrando o nome dos integrantes nos Labels e calculando valores
             Resumo telaResumo = new Resumo();
-            System.out.println("Chegou nos ifs");
             if (!vetorIntegrantes.get(0).equals("Vazio")){
                 telaResumo.setNomeIntegrante1(vetorIntegrantes.get(0));
+                valorIndividual = Conta.calcularValorIndividual("1");
+                telaResumo.setValorIntegrante1(valorIndividual);
+                valoresIndividuais.add(valorIndividual);
             }
             if (!vetorIntegrantes.get(1).equals("Vazio")){
                 telaResumo.setNomeIntegrante2(vetorIntegrantes.get(1));
+                valorIndividual = Conta.calcularValorIndividual("2");
+                telaResumo.setValorIntegrante2(valorIndividual);
+                valoresIndividuais.add(valorIndividual);
             }
             if (!vetorIntegrantes.get(2).equals("Vazio")){
                 telaResumo.setNomeIntegrante3(vetorIntegrantes.get(2));
+                valorIndividual = Conta.calcularValorIndividual("3");
+                telaResumo.setValorIntegrante3(valorIndividual);
+                valoresIndividuais.add(valorIndividual);
             }
             if (!vetorIntegrantes.get(3).equals("Vazio")){
                 telaResumo.setNomeIntegrante4(vetorIntegrantes.get(3));
+                valorIndividual = Conta.calcularValorIndividual("4");
+                telaResumo.setValorIntegrante4(valorIndividual);
+                valoresIndividuais.add(valorIndividual);                
             }
             if (!vetorIntegrantes.get(4).equals("Vazio")){
                 telaResumo.setNomeIntegrante5(vetorIntegrantes.get(4));
+                valorIndividual = Conta.calcularValorIndividual("5");
+                telaResumo.setValorIntegrante5(valorIndividual);
+                valoresIndividuais.add(valorIndividual);
             }
             if (!vetorIntegrantes.get(5).equals("Vazio")){
                 telaResumo.setNomeIntegrante6(vetorIntegrantes.get(5));
+                valorIndividual = Conta.calcularValorIndividual("6");
+                telaResumo.setValorIntegrante6(valorIndividual);
+                valoresIndividuais.add(valorIndividual);
             }
+            double valorTotal = 0;
+            for (int i = 0; i < valoresIndividuais.size(); i++){
+                valorTotal += valoresIndividuais.get(i);
+            }
+            telaResumo.setValorTotal(valorTotal);
             telaResumo.setVisible(true);
-            System.out.println("Pós setvisible");
-            /*SwingUtilities.updateComponentTreeUI(telaResumo);
-            telaResumo.invalidate();
-            telaResumo.validate();
-            telaResumo.repaint();
-            CON.con.close();*/
         } catch (SQLException e) {
             System.out.println(e);
             System.out.println("Deu erro!");
             throw new RuntimeException(e);
         }
-    }//GEN-LAST:event_jLabel4MouseClicked
+    }//GEN-LAST:event_ResumoMouseClicked
 
     /**
      * @param args the command line arguments
@@ -234,9 +253,9 @@ public class Cardapio extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel Resumo;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;

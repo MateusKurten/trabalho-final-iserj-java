@@ -60,6 +60,8 @@ public class Resumo extends javax.swing.JFrame {
         Titulo2 = new javax.swing.JLabel();
         botaoVoltar = new javax.swing.JButton();
         botaoFecharConta = new javax.swing.JButton();
+        valorTotal = new javax.swing.JLabel();
+        Titulo3 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMaximumSize(new java.awt.Dimension(1024, 720));
@@ -67,11 +69,15 @@ public class Resumo extends javax.swing.JFrame {
         setResizable(false);
         setSize(new java.awt.Dimension(1024, 720));
 
+        valorIntegrante1.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        valorIntegrante1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         valorIntegrante1.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 3, true));
 
         Titulo.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
         Titulo.setText("Conta");
 
+        nomeIntegrante1.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        nomeIntegrante1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         nomeIntegrante1.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 3, true));
 
         botaoVerPedidos1.setBackground(new java.awt.Color(255, 102, 51));
@@ -79,8 +85,12 @@ public class Resumo extends javax.swing.JFrame {
         botaoVerPedidos1.setForeground(new java.awt.Color(255, 255, 255));
         botaoVerPedidos1.setText("Ver Pedidos");
 
+        valorIntegrante2.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        valorIntegrante2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         valorIntegrante2.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 3, true));
 
+        nomeIntegrante2.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        nomeIntegrante2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         nomeIntegrante2.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 3, true));
 
         botaoVerPedidos2.setBackground(new java.awt.Color(255, 102, 51));
@@ -88,8 +98,12 @@ public class Resumo extends javax.swing.JFrame {
         botaoVerPedidos2.setForeground(new java.awt.Color(255, 255, 255));
         botaoVerPedidos2.setText("Ver Pedidos");
 
+        valorIntegrante3.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        valorIntegrante3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         valorIntegrante3.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 3, true));
 
+        nomeIntegrante3.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        nomeIntegrante3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         nomeIntegrante3.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 3, true));
 
         botaoVerPedidos3.setBackground(new java.awt.Color(255, 102, 51));
@@ -97,8 +111,12 @@ public class Resumo extends javax.swing.JFrame {
         botaoVerPedidos3.setForeground(new java.awt.Color(255, 255, 255));
         botaoVerPedidos3.setText("Ver Pedidos");
 
+        valorIntegrante4.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        valorIntegrante4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         valorIntegrante4.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 3, true));
 
+        nomeIntegrante4.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        nomeIntegrante4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         nomeIntegrante4.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 3, true));
 
         botaoVerPedidos4.setBackground(new java.awt.Color(255, 102, 51));
@@ -106,8 +124,12 @@ public class Resumo extends javax.swing.JFrame {
         botaoVerPedidos4.setForeground(new java.awt.Color(255, 255, 255));
         botaoVerPedidos4.setText("Ver Pedidos");
 
+        valorIntegrante5.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        valorIntegrante5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         valorIntegrante5.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 3, true));
 
+        nomeIntegrante5.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        nomeIntegrante5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         nomeIntegrante5.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 3, true));
 
         botaoVerPedidos5.setBackground(new java.awt.Color(255, 102, 51));
@@ -115,8 +137,12 @@ public class Resumo extends javax.swing.JFrame {
         botaoVerPedidos5.setForeground(new java.awt.Color(255, 255, 255));
         botaoVerPedidos5.setText("Ver Pedidos");
 
+        valorIntegrante6.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        valorIntegrante6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         valorIntegrante6.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 3, true));
 
+        nomeIntegrante6.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        nomeIntegrante6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         nomeIntegrante6.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 3, true));
 
         botaoVerPedidos6.setBackground(new java.awt.Color(255, 102, 51));
@@ -128,7 +154,7 @@ public class Resumo extends javax.swing.JFrame {
         Titulo1.setText("Valor");
 
         Titulo2.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
-        Titulo2.setText("Nome");
+        Titulo2.setText("Total:");
 
         botaoVoltar.setBackground(new java.awt.Color(255, 102, 51));
         botaoVoltar.setFont(new java.awt.Font("Arial Black", 0, 24)); // NOI18N
@@ -145,6 +171,13 @@ public class Resumo extends javax.swing.JFrame {
         botaoFecharConta.setForeground(new java.awt.Color(255, 255, 255));
         botaoFecharConta.setText("Fechar Conta");
 
+        valorTotal.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        valorTotal.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        valorTotal.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 3, true));
+
+        Titulo3.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
+        Titulo3.setText("Nome");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -152,51 +185,58 @@ public class Resumo extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addGap(46, 46, 46)
                 .addComponent(botaoVoltar, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 74, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 62, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                 .addGroup(layout.createSequentialGroup()
-                                    .addComponent(nomeIntegrante2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                        .addGroup(layout.createSequentialGroup()
+                                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                                .addComponent(nomeIntegrante5, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 267, Short.MAX_VALUE)
+                                                .addComponent(nomeIntegrante4, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                                .addComponent(nomeIntegrante3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                                .addComponent(nomeIntegrante6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                            .addGap(18, 18, 18))
+                                        .addGroup(layout.createSequentialGroup()
+                                            .addComponent(Titulo2, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addGap(28, 28, 28)))
+                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(valorTotal, javax.swing.GroupLayout.PREFERRED_SIZE, 225, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                                .addComponent(valorIntegrante6, javax.swing.GroupLayout.PREFERRED_SIZE, 226, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addGap(54, 54, 54)
+                                                .addComponent(botaoVerPedidos6, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                                .addComponent(valorIntegrante5, javax.swing.GroupLayout.PREFERRED_SIZE, 226, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addGap(54, 54, 54)
+                                                .addComponent(botaoVerPedidos5, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                                .addComponent(valorIntegrante4, javax.swing.GroupLayout.PREFERRED_SIZE, 226, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addGap(54, 54, 54)
+                                                .addComponent(botaoVerPedidos4, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                                .addComponent(valorIntegrante3, javax.swing.GroupLayout.PREFERRED_SIZE, 226, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addGap(54, 54, 54)
+                                                .addComponent(botaoVerPedidos3, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                                .addGroup(layout.createSequentialGroup()
+                                    .addComponent(nomeIntegrante2, javax.swing.GroupLayout.PREFERRED_SIZE, 267, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGap(18, 18, 18)
                                     .addComponent(valorIntegrante2, javax.swing.GroupLayout.PREFERRED_SIZE, 226, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addGap(54, 54, 54)
-                                    .addComponent(botaoVerPedidos2, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGroup(layout.createSequentialGroup()
-                                    .addComponent(nomeIntegrante1, javax.swing.GroupLayout.PREFERRED_SIZE, 267, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(valorIntegrante1, javax.swing.GroupLayout.PREFERRED_SIZE, 226, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addGap(54, 54, 54)
-                                    .addComponent(botaoVerPedidos1, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(nomeIntegrante5, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 267, Short.MAX_VALUE)
-                                    .addComponent(nomeIntegrante4, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(nomeIntegrante3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(nomeIntegrante6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                        .addComponent(valorIntegrante6, javax.swing.GroupLayout.PREFERRED_SIZE, 226, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGap(54, 54, 54)
-                                        .addComponent(botaoVerPedidos6, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                        .addComponent(valorIntegrante5, javax.swing.GroupLayout.PREFERRED_SIZE, 226, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGap(54, 54, 54)
-                                        .addComponent(botaoVerPedidos5, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                        .addComponent(valorIntegrante4, javax.swing.GroupLayout.PREFERRED_SIZE, 226, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGap(54, 54, 54)
-                                        .addComponent(botaoVerPedidos4, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                        .addComponent(valorIntegrante3, javax.swing.GroupLayout.PREFERRED_SIZE, 226, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGap(54, 54, 54)
-                                        .addComponent(botaoVerPedidos3, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                                    .addComponent(botaoVerPedidos2, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(nomeIntegrante1, javax.swing.GroupLayout.PREFERRED_SIZE, 267, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(valorIntegrante1, javax.swing.GroupLayout.PREFERRED_SIZE, 226, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(botaoVerPedidos1, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addGap(58, 58, 58))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(Titulo2, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(152, 152, 152)
+                        .addComponent(Titulo3, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(168, 168, 168)
                         .addComponent(Titulo1, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(387, 387, 387))))
             .addGroup(layout.createSequentialGroup()
@@ -215,11 +255,11 @@ public class Resumo extends javax.swing.JFrame {
                 .addComponent(Titulo, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(54, 54, 54)
+                        .addGap(18, 18, 18)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(Titulo1, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(Titulo2, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                            .addComponent(Titulo3, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                 .addComponent(botaoVerPedidos1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -255,9 +295,16 @@ public class Resumo extends javax.swing.JFrame {
                                 .addComponent(botaoVerPedidos6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addComponent(valorIntegrante6, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addComponent(nomeIntegrante6, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(61, 61, 61)
-                        .addComponent(botaoFecharConta, javax.swing.GroupLayout.DEFAULT_SIZE, 52, Short.MAX_VALUE)
-                        .addGap(41, 41, 41))
+                        .addGap(18, 18, 18)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(valorTotal, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(Titulo2, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)
+                                .addGap(64, 64, 64)))
+                        .addComponent(botaoFecharConta, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGap(61, 61, 61))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(botaoVoltar, javax.swing.GroupLayout.PREFERRED_SIZE, 500, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -267,6 +314,14 @@ public class Resumo extends javax.swing.JFrame {
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
+
+    public JLabel getValorTotal() {
+        return valorTotal;
+    }
+
+    public void setValorTotal(Double valor) {
+        this.valorTotal.setText(String.valueOf(valor));
+    }
 
     //SETTERS E GETTERS
     
@@ -322,48 +377,48 @@ public class Resumo extends javax.swing.JFrame {
         return valorIntegrante1;
     }
 
-    public void setValorIntegrante1(JLabel valorIntegrante1) {
-        this.valorIntegrante1 = valorIntegrante1;
+    public void setValorIntegrante1(Double valor) {
+        this.valorIntegrante1.setText(String.valueOf(valor));
     }
 
     public JLabel getValorIntegrante2() {
         return valorIntegrante2;
     }
 
-    public void setValorIntegrante2(JLabel valorIntegrante2) {
-        this.valorIntegrante2 = valorIntegrante2;
+    public void setValorIntegrante2(Double valor) {
+        this.valorIntegrante2.setText(String.valueOf(valor));
     }
 
     public JLabel getValorIntegrante3() {
         return valorIntegrante3;
     }
 
-    public void setValorIntegrante3(JLabel valorIntegrante3) {
-        this.valorIntegrante3 = valorIntegrante3;
+    public void setValorIntegrante3(Double valor) {
+       this.valorIntegrante3.setText(String.valueOf(valor));
     }
 
     public JLabel getValorIntegrante4() {
         return valorIntegrante4;
     }
 
-    public void setValorIntegrante4(JLabel valorIntegrante4) {
-        this.valorIntegrante4 = valorIntegrante4;
+    public void setValorIntegrante4(Double valor) {
+        this.valorIntegrante4.setText(String.valueOf(valor));
     }
 
     public JLabel getValorIntegrante5() {
         return valorIntegrante5;
     }
 
-    public void setValorIntegrante5(JLabel valorIntegrante5) {
-        this.valorIntegrante5 = valorIntegrante5;
+    public void setValorIntegrante5(Double valor) {
+        this.valorIntegrante5.setText(String.valueOf(valor));
     }
 
     public JLabel getValorIntegrante6() {
         return valorIntegrante6;
     }
 
-    public void setValorIntegrante6(JLabel valorIntegrante6) {
-        this.valorIntegrante6 = valorIntegrante6;
+    public void setValorIntegrante6(Double valor) {
+        this.valorIntegrante6.setText(String.valueOf(valor));
     }
 
     private void botaoVoltarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoVoltarActionPerformed
@@ -404,53 +459,7 @@ public class Resumo extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                System.out.println("O run rodou");
-                Conexao CON = new Conexao();
-                CON.Conectar();
-                try{
-                    //Buscando nome dos integrantes
-                    ArrayList<String> vetorIntegrantes = new ArrayList<String>();
-                    PreparedStatement stmt = CON.con.prepareStatement("Select nome from integrantes");
-                    ResultSet rs = stmt.executeQuery();
-                    while (rs.next()){
-                        vetorIntegrantes.add(rs.getString("nome"));
-                    }
-                    while (vetorIntegrantes.size() < 6){
-                        vetorIntegrantes.add("Vazio");
-                    }
-                    //Mostrando o nome dos integrantes nos Labels
-                    Resumo telaResumo = new Resumo();
-                    System.out.println("Chegou nos ifs");
-                    if (!vetorIntegrantes.get(0).equals("Vazio")){
-                        telaResumo.nomeIntegrante1.setText(vetorIntegrantes.get(0));
-                    }
-                    if (!vetorIntegrantes.get(1).equals("Vazio")){
-                        telaResumo.nomeIntegrante2.setText(vetorIntegrantes.get(1));
-                    }
-                    if (!vetorIntegrantes.get(2).equals("Vazio")){
-                        telaResumo.nomeIntegrante3.setText(vetorIntegrantes.get(2));
-                    }
-                    if (!vetorIntegrantes.get(3).equals("Vazio")){
-                        telaResumo.nomeIntegrante4.setText(vetorIntegrantes.get(3));
-                    }
-                    if (!vetorIntegrantes.get(4).equals("Vazio")){
-                        telaResumo.nomeIntegrante5.setText(vetorIntegrantes.get(4));
-                    }
-                    if (!vetorIntegrantes.get(5).equals("Vazio")){
-                        telaResumo.nomeIntegrante6.setText(vetorIntegrantes.get(5));
-                    }
-                    telaResumo.setVisible(true);
-                    System.out.println("Pós setvisible");
-                    SwingUtilities.updateComponentTreeUI(telaResumo);
-                    telaResumo.invalidate();
-                    telaResumo.validate();
-                    telaResumo.repaint();
-                    CON.con.close();
-                } catch (SQLException e) {
-                    System.out.println(e);
-                    System.out.println("Deu erro!");
-                    throw new RuntimeException(e);
-                }
+                
             }
         });
     }
@@ -459,6 +468,7 @@ public class Resumo extends javax.swing.JFrame {
     private javax.swing.JLabel Titulo;
     private javax.swing.JLabel Titulo1;
     private javax.swing.JLabel Titulo2;
+    private javax.swing.JLabel Titulo3;
     private javax.swing.JButton botaoFecharConta;
     private javax.swing.JButton botaoVerPedidos1;
     private javax.swing.JButton botaoVerPedidos2;
@@ -479,5 +489,6 @@ public class Resumo extends javax.swing.JFrame {
     private javax.swing.JLabel valorIntegrante4;
     private javax.swing.JLabel valorIntegrante5;
     private javax.swing.JLabel valorIntegrante6;
+    private javax.swing.JLabel valorTotal;
     // End of variables declaration//GEN-END:variables
 }

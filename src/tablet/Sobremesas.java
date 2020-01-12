@@ -5,6 +5,8 @@
  */
 package tablet;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author aluno
@@ -217,6 +219,7 @@ public class Sobremesas extends javax.swing.JFrame {
         if ((Integer) qtdSorvete.getValue() > 0){
             Conta.incluirPedido(idIntegrante, 12, (Integer) qtdSorvete.getValue());
         }
+        JOptionPane.showMessageDialog(null, "Pedido confirmado!");
     }//GEN-LAST:event_botaoConfirmarPedidoActionPerformed
 
     /**

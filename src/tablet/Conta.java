@@ -7,6 +7,9 @@ package tablet;
 
 import javax.swing.JOptionPane;
 import conexao.*;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 
 /**
  *
@@ -37,6 +40,23 @@ public class Conta {
             }while(nome.isEmpty());
             BancoDeDados.inserirQuery("Insert into integrantes(nome) values (\"" + nome + "\");");
         }
+    }
+    
+    protected static double calcularValorIndividual(String idIntegrante) throws SQLException{
+        Conexao CON = new Conexao();
+        CON.Conectar();
+        double valor = 0;
+        PreparedStatement stmtPedidos1 = CON.con.prepareStatement("select i.nome, c.descricao, c.preco, p.qtd from integrantes i,"
+                                                        + " pedidos p, cardapio c\n" +
+                                                        "where i.idIntegrante = " + idIntegrante + " and"
+                                                        + " p.idIntegrante = " + idIntegrante + " and\n" +
+                                                        "c.idItem = p.idItem;");
+        ResultSet rsPedidos1 = stmtPedidos1.executeQuery();
+        while (rsPedidos1.next()){
+            valor += Double.parseDouble(rsPedidos1.getString("preco")) * Integer.parseInt(rsPedidos1.getString("qtd"));
+        }
+        CON.con.close();
+        return valor;
     }
     
     protected static void incluirPedido(int idIntegrante, int idItem, int qtd){

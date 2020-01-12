@@ -5,6 +5,8 @@
  */
 package tablet;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author aluno
@@ -227,6 +229,7 @@ public class Pratos extends javax.swing.JFrame {
         if ((Integer) qtdHamburguer.getValue() > 0){
             Conta.incluirPedido(idIntegrante, 4, (Integer) qtdHamburguer.getValue());
         }
+        JOptionPane.showMessageDialog(null, "Pedido confirmado!");
     }//GEN-LAST:event_botaoConfirmarPedidoActionPerformed
 
     /**

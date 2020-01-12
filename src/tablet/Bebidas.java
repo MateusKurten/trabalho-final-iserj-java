@@ -5,6 +5,8 @@
  */
 package tablet;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author aluno
@@ -217,6 +219,7 @@ public class Bebidas extends javax.swing.JFrame {
         if ((Integer) qtdMilkshake.getValue() > 0){
             Conta.incluirPedido(idIntegrante, 8, (Integer) qtdMilkshake.getValue());
         }
+        JOptionPane.showMessageDialog(null, "Pedido confirmado!");
     }//GEN-LAST:event_botaoConfirmarPedidoActionPerformed
 
     /**
