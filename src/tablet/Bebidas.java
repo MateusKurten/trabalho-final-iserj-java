@@ -33,6 +33,21 @@ public class Bebidas extends javax.swing.JFrame {
         bebida2 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
+        qtdCerveja = new javax.swing.JSpinner();
+        qtdLabel = new javax.swing.JLabel();
+        precoCerveja = new javax.swing.JLabel();
+        qtdRefrigerante = new javax.swing.JSpinner();
+        qtdLabel1 = new javax.swing.JLabel();
+        precoRefrigerante = new javax.swing.JLabel();
+        qtdSuco = new javax.swing.JSpinner();
+        qtdLabel2 = new javax.swing.JLabel();
+        precoSuco = new javax.swing.JLabel();
+        qtdMilkshake = new javax.swing.JSpinner();
+        qtdLabel3 = new javax.swing.JLabel();
+        precoMilkshake = new javax.swing.JLabel();
+        quemVaiPagar = new javax.swing.JLabel();
+        nomeIntegrante = new javax.swing.JComboBox<>();
+        botaoConfirmarPedido = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("ESCOLHA SUA BEBIDA");
@@ -47,7 +62,7 @@ public class Bebidas extends javax.swing.JFrame {
         bebida4.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 3, true));
         bebida4.setOpaque(true);
         getContentPane().add(bebida4);
-        bebida4.setBounds(540, 390, 325, 257);
+        bebida4.setBounds(540, 360, 325, 180);
 
         bebida3.setBackground(new java.awt.Color(0, 204, 255));
         bebida3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagem/SUCO.jpg"))); // NOI18N
@@ -55,7 +70,7 @@ public class Bebidas extends javax.swing.JFrame {
         bebida3.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 3, true));
         bebida3.setOpaque(true);
         getContentPane().add(bebida3);
-        bebida3.setBounds(150, 390, 325, 257);
+        bebida3.setBounds(150, 360, 325, 180);
 
         bebida1.setBackground(new java.awt.Color(0, 204, 255));
         bebida1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagem/cervejadacasa.jpg"))); // NOI18N
@@ -63,7 +78,7 @@ public class Bebidas extends javax.swing.JFrame {
         bebida1.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 3, true));
         bebida1.setOpaque(true);
         getContentPane().add(bebida1);
-        bebida1.setBounds(150, 110, 325, 257);
+        bebida1.setBounds(150, 80, 325, 210);
 
         bebida2.setBackground(new java.awt.Color(255, 0, 0));
         bebida2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagem/Refrigerante.jpg"))); // NOI18N
@@ -71,13 +86,13 @@ public class Bebidas extends javax.swing.JFrame {
         bebida2.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 3, true));
         bebida2.setOpaque(true);
         getContentPane().add(bebida2);
-        bebida2.setBounds(540, 110, 325, 257);
+        bebida2.setBounds(540, 80, 325, 210);
 
         jLabel1.setFont(new java.awt.Font("Bernard MT Condensed", 1, 36)); // NOI18N
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("ESCOLHA SUA BEBIDA");
         getContentPane().add(jLabel1);
-        jLabel1.setBounds(330, 40, 330, 40);
+        jLabel1.setBounds(330, 20, 330, 40);
 
         jButton1.setBackground(new java.awt.Color(255, 102, 51));
         jButton1.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
@@ -91,6 +106,87 @@ public class Bebidas extends javax.swing.JFrame {
         getContentPane().add(jButton1);
         jButton1.setBounds(50, 220, 60, 270);
 
+        qtdCerveja.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        getContentPane().add(qtdCerveja);
+        qtdCerveja.setBounds(410, 300, 50, 40);
+
+        qtdLabel.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        qtdLabel.setText("QTD:");
+        getContentPane().add(qtdLabel);
+        qtdLabel.setBounds(350, 300, 80, 40);
+
+        precoCerveja.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        precoCerveja.setText("Preço: R$ 9,00");
+        getContentPane().add(precoCerveja);
+        precoCerveja.setBounds(170, 300, 170, 40);
+
+        qtdRefrigerante.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        getContentPane().add(qtdRefrigerante);
+        qtdRefrigerante.setBounds(800, 300, 50, 40);
+
+        qtdLabel1.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        qtdLabel1.setText("QTD:");
+        getContentPane().add(qtdLabel1);
+        qtdLabel1.setBounds(740, 300, 80, 40);
+
+        precoRefrigerante.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        precoRefrigerante.setText("Preço: R$ 6,00");
+        getContentPane().add(precoRefrigerante);
+        precoRefrigerante.setBounds(560, 300, 170, 40);
+
+        qtdSuco.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        getContentPane().add(qtdSuco);
+        qtdSuco.setBounds(410, 560, 50, 40);
+
+        qtdLabel2.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        qtdLabel2.setText("QTD:");
+        getContentPane().add(qtdLabel2);
+        qtdLabel2.setBounds(350, 560, 80, 40);
+
+        precoSuco.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        precoSuco.setText("Preço: R$ 8,00");
+        getContentPane().add(precoSuco);
+        precoSuco.setBounds(170, 560, 170, 40);
+
+        qtdMilkshake.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        getContentPane().add(qtdMilkshake);
+        qtdMilkshake.setBounds(800, 560, 50, 40);
+
+        qtdLabel3.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        qtdLabel3.setText("QTD:");
+        getContentPane().add(qtdLabel3);
+        qtdLabel3.setBounds(740, 560, 80, 40);
+
+        precoMilkshake.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        precoMilkshake.setText("Preço: R$ 13,00");
+        getContentPane().add(precoMilkshake);
+        precoMilkshake.setBounds(550, 560, 170, 40);
+
+        quemVaiPagar.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        quemVaiPagar.setText("Quem vai pagar?");
+        getContentPane().add(quemVaiPagar);
+        quemVaiPagar.setBounds(250, 630, 200, 40);
+
+        nomeIntegrante.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        nomeIntegrante.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "1", "2", "3", "4" }));
+        nomeIntegrante.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                nomeIntegranteActionPerformed(evt);
+            }
+        });
+        getContentPane().add(nomeIntegrante);
+        nomeIntegrante.setBounds(450, 630, 60, 40);
+
+        botaoConfirmarPedido.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        botaoConfirmarPedido.setText("Confirmar Pedido");
+        botaoConfirmarPedido.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botaoConfirmarPedidoActionPerformed(evt);
+            }
+        });
+        getContentPane().add(botaoConfirmarPedido);
+        botaoConfirmarPedido.setBounds(550, 620, 270, 50);
+
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
@@ -98,6 +194,30 @@ public class Bebidas extends javax.swing.JFrame {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
     this.dispose();
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void nomeIntegranteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nomeIntegranteActionPerformed
+        // TODO add your handling code here:
+        //MUDAR PARA O NOME DOS INTEGRANTES
+    }//GEN-LAST:event_nomeIntegranteActionPerformed
+
+    private void botaoConfirmarPedidoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoConfirmarPedidoActionPerformed
+        // TODO add your handling code here:
+        String nomeIntegranteStr = nomeIntegrante.getSelectedItem().toString();
+        System.out.println(nomeIntegranteStr);
+        int idIntegrante = Integer.parseInt(nomeIntegranteStr);
+        if ((Integer) qtdCerveja.getValue() > 0){
+            Conta.incluirPedido(idIntegrante, 5, (Integer) qtdCerveja.getValue());
+        }
+        if ((Integer) qtdRefrigerante.getValue() > 0){
+            Conta.incluirPedido(idIntegrante, 6, (Integer) qtdRefrigerante.getValue());
+        }
+        if ((Integer) qtdSuco.getValue() > 0){
+            Conta.incluirPedido(idIntegrante, 7, (Integer) qtdSuco.getValue());
+        }
+        if ((Integer) qtdMilkshake.getValue() > 0){
+            Conta.incluirPedido(idIntegrante, 8, (Integer) qtdMilkshake.getValue());
+        }
+    }//GEN-LAST:event_botaoConfirmarPedidoActionPerformed
 
     /**
      * @param args the command line arguments
@@ -140,7 +260,22 @@ public class Bebidas extends javax.swing.JFrame {
     private javax.swing.JLabel bebida2;
     private javax.swing.JLabel bebida3;
     private javax.swing.JLabel bebida4;
+    private javax.swing.JButton botaoConfirmarPedido;
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JComboBox<String> nomeIntegrante;
+    private javax.swing.JLabel precoCerveja;
+    private javax.swing.JLabel precoMilkshake;
+    private javax.swing.JLabel precoRefrigerante;
+    private javax.swing.JLabel precoSuco;
+    private javax.swing.JSpinner qtdCerveja;
+    private javax.swing.JLabel qtdLabel;
+    private javax.swing.JLabel qtdLabel1;
+    private javax.swing.JLabel qtdLabel2;
+    private javax.swing.JLabel qtdLabel3;
+    private javax.swing.JSpinner qtdMilkshake;
+    private javax.swing.JSpinner qtdRefrigerante;
+    private javax.swing.JSpinner qtdSuco;
+    private javax.swing.JLabel quemVaiPagar;
     // End of variables declaration//GEN-END:variables
 }

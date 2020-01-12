@@ -33,6 +33,21 @@ public class Sobremesas extends javax.swing.JFrame {
         sobremesa2 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
+        qtdPudim = new javax.swing.JSpinner();
+        qtdLabel = new javax.swing.JLabel();
+        precoPudim = new javax.swing.JLabel();
+        qtdPetitGateau = new javax.swing.JSpinner();
+        qtdLabel1 = new javax.swing.JLabel();
+        precoPetitGateau = new javax.swing.JLabel();
+        qtdMousseMaracuja = new javax.swing.JSpinner();
+        qtdLabel2 = new javax.swing.JLabel();
+        precoMousseMaracuja = new javax.swing.JLabel();
+        qtdSorvete = new javax.swing.JSpinner();
+        qtdLabel3 = new javax.swing.JLabel();
+        precoSorvete = new javax.swing.JLabel();
+        quemVaiPagar = new javax.swing.JLabel();
+        nomeIntegrante = new javax.swing.JComboBox<>();
+        botaoConfirmarPedido = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("ESCOLHA SUA SOBREMESA");
@@ -47,7 +62,7 @@ public class Sobremesas extends javax.swing.JFrame {
         sobremesa4.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 3, true));
         sobremesa4.setOpaque(true);
         getContentPane().add(sobremesa4);
-        sobremesa4.setBounds(540, 390, 325, 257);
+        sobremesa4.setBounds(550, 370, 325, 190);
 
         sobremesa3.setBackground(new java.awt.Color(0, 204, 255));
         sobremesa3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagem/mousse-maracuja-400x400.jpg"))); // NOI18N
@@ -55,7 +70,7 @@ public class Sobremesas extends javax.swing.JFrame {
         sobremesa3.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 3, true));
         sobremesa3.setOpaque(true);
         getContentPane().add(sobremesa3);
-        sobremesa3.setBounds(150, 390, 325, 257);
+        sobremesa3.setBounds(160, 370, 325, 190);
 
         sobremesa1.setBackground(new java.awt.Color(0, 204, 255));
         sobremesa1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagem/PUDIM.jpg"))); // NOI18N
@@ -63,7 +78,7 @@ public class Sobremesas extends javax.swing.JFrame {
         sobremesa1.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 3, true));
         sobremesa1.setOpaque(true);
         getContentPane().add(sobremesa1);
-        sobremesa1.setBounds(150, 110, 325, 257);
+        sobremesa1.setBounds(160, 90, 325, 200);
 
         sobremesa2.setBackground(new java.awt.Color(255, 0, 0));
         sobremesa2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagem/Petit-Gateau-400x400.jpg"))); // NOI18N
@@ -71,13 +86,13 @@ public class Sobremesas extends javax.swing.JFrame {
         sobremesa2.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 3, true));
         sobremesa2.setOpaque(true);
         getContentPane().add(sobremesa2);
-        sobremesa2.setBounds(540, 110, 325, 257);
+        sobremesa2.setBounds(550, 90, 325, 190);
 
         jLabel1.setFont(new java.awt.Font("Bernard MT Condensed", 1, 36)); // NOI18N
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("ESCOLHA SUA SOBREMESA");
         getContentPane().add(jLabel1);
-        jLabel1.setBounds(300, 40, 410, 40);
+        jLabel1.setBounds(310, 20, 410, 40);
 
         jButton1.setBackground(new java.awt.Color(255, 102, 51));
         jButton1.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
@@ -91,6 +106,87 @@ public class Sobremesas extends javax.swing.JFrame {
         getContentPane().add(jButton1);
         jButton1.setBounds(50, 220, 60, 270);
 
+        qtdPudim.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        getContentPane().add(qtdPudim);
+        qtdPudim.setBounds(430, 300, 50, 40);
+
+        qtdLabel.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        qtdLabel.setText("QTD:");
+        getContentPane().add(qtdLabel);
+        qtdLabel.setBounds(370, 300, 80, 40);
+
+        precoPudim.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        precoPudim.setText("Preço: R$ 7,50");
+        getContentPane().add(precoPudim);
+        precoPudim.setBounds(190, 300, 170, 40);
+
+        qtdPetitGateau.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        getContentPane().add(qtdPetitGateau);
+        qtdPetitGateau.setBounds(810, 300, 50, 40);
+
+        qtdLabel1.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        qtdLabel1.setText("QTD:");
+        getContentPane().add(qtdLabel1);
+        qtdLabel1.setBounds(750, 300, 80, 40);
+
+        precoPetitGateau.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        precoPetitGateau.setText("Preço: R$ 10,00");
+        getContentPane().add(precoPetitGateau);
+        precoPetitGateau.setBounds(570, 300, 170, 40);
+
+        qtdMousseMaracuja.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        getContentPane().add(qtdMousseMaracuja);
+        qtdMousseMaracuja.setBounds(420, 570, 50, 40);
+
+        qtdLabel2.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        qtdLabel2.setText("QTD:");
+        getContentPane().add(qtdLabel2);
+        qtdLabel2.setBounds(360, 570, 80, 40);
+
+        precoMousseMaracuja.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        precoMousseMaracuja.setText("Preço: R$ 7,50");
+        getContentPane().add(precoMousseMaracuja);
+        precoMousseMaracuja.setBounds(180, 570, 170, 40);
+
+        qtdSorvete.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        getContentPane().add(qtdSorvete);
+        qtdSorvete.setBounds(810, 570, 50, 40);
+
+        qtdLabel3.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        qtdLabel3.setText("QTD:");
+        getContentPane().add(qtdLabel3);
+        qtdLabel3.setBounds(750, 570, 80, 40);
+
+        precoSorvete.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        precoSorvete.setText("Preço: R$ 5,50");
+        getContentPane().add(precoSorvete);
+        precoSorvete.setBounds(570, 570, 170, 40);
+
+        quemVaiPagar.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        quemVaiPagar.setText("Quem vai pagar?");
+        getContentPane().add(quemVaiPagar);
+        quemVaiPagar.setBounds(250, 630, 200, 40);
+
+        nomeIntegrante.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        nomeIntegrante.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "1", "2", "3", "4" }));
+        nomeIntegrante.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                nomeIntegranteActionPerformed(evt);
+            }
+        });
+        getContentPane().add(nomeIntegrante);
+        nomeIntegrante.setBounds(450, 630, 60, 40);
+
+        botaoConfirmarPedido.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        botaoConfirmarPedido.setText("Confirmar Pedido");
+        botaoConfirmarPedido.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botaoConfirmarPedidoActionPerformed(evt);
+            }
+        });
+        getContentPane().add(botaoConfirmarPedido);
+        botaoConfirmarPedido.setBounds(550, 620, 270, 50);
+
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
@@ -98,6 +194,30 @@ public class Sobremesas extends javax.swing.JFrame {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
     this.dispose();
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void nomeIntegranteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nomeIntegranteActionPerformed
+        // TODO add your handling code here:
+        //MUDAR PARA O NOME DOS INTEGRANTES
+    }//GEN-LAST:event_nomeIntegranteActionPerformed
+
+    private void botaoConfirmarPedidoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoConfirmarPedidoActionPerformed
+        // TODO add your handling code here:
+        String nomeIntegranteStr = nomeIntegrante.getSelectedItem().toString();
+        System.out.println(nomeIntegranteStr);
+        int idIntegrante = Integer.parseInt(nomeIntegranteStr);
+        if ((Integer) qtdPudim.getValue() > 0){
+            Conta.incluirPedido(idIntegrante, 9, (Integer) qtdPudim.getValue());
+        }
+        if ((Integer) qtdPetitGateau.getValue() > 0){
+            Conta.incluirPedido(idIntegrante, 10, (Integer) qtdPetitGateau.getValue());
+        }
+        if ((Integer) qtdMousseMaracuja.getValue() > 0){
+            Conta.incluirPedido(idIntegrante, 11, (Integer) qtdMousseMaracuja.getValue());
+        }
+        if ((Integer) qtdSorvete.getValue() > 0){
+            Conta.incluirPedido(idIntegrante, 12, (Integer) qtdSorvete.getValue());
+        }
+    }//GEN-LAST:event_botaoConfirmarPedidoActionPerformed
 
     /**
      * @param args the command line arguments
@@ -136,8 +256,23 @@ public class Sobremesas extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton botaoConfirmarPedido;
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JComboBox<String> nomeIntegrante;
+    private javax.swing.JLabel precoMousseMaracuja;
+    private javax.swing.JLabel precoPetitGateau;
+    private javax.swing.JLabel precoPudim;
+    private javax.swing.JLabel precoSorvete;
+    private javax.swing.JLabel qtdLabel;
+    private javax.swing.JLabel qtdLabel1;
+    private javax.swing.JLabel qtdLabel2;
+    private javax.swing.JLabel qtdLabel3;
+    private javax.swing.JSpinner qtdMousseMaracuja;
+    private javax.swing.JSpinner qtdPetitGateau;
+    private javax.swing.JSpinner qtdPudim;
+    private javax.swing.JSpinner qtdSorvete;
+    private javax.swing.JLabel quemVaiPagar;
     private javax.swing.JLabel sobremesa1;
     private javax.swing.JLabel sobremesa2;
     private javax.swing.JLabel sobremesa3;

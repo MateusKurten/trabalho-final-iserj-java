@@ -180,7 +180,7 @@ public class Pratos extends javax.swing.JFrame {
             }
         });
         getContentPane().add(nomeIntegrante);
-        nomeIntegrante.setBounds(470, 620, 40, 40);
+        nomeIntegrante.setBounds(450, 620, 60, 40);
 
         botaoConfirmarPedido.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         botaoConfirmarPedido.setText("Confirmar Pedido");
